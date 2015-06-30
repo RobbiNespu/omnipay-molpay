@@ -1,33 +1,7 @@
-<?php namespace Omnipay\MolPay;
+<?php namespace OmniPay\MolPay\Message;
 
-use Onipay\Common\AbstractGateway;
-use MolPay\Distribution\InpageMolpay;
-
-class Gateway extends AbstractGateway
+abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
-    public function getName()
-    {
-        return 'MolPay';
-    }
-
-    public function getDefaultParameters()
-    {
-        return array(
-            'merchantId' => '',
-            'verifyKey' => '',
-            'billingName' => '',
-            'billingEmail' => '',
-            'billingMobile' => '',
-            'billingDescription' => '',
-            'country' => '',
-            'returnUrl' => '',
-            'currency' => '',
-            'languageCode' => '',
-            'paymentMethod' => '',
-            'testMode' => false,
-        );
-    }
-
     public function getMerchantId()
     {
         return $this->getParameter('merchantID');
@@ -138,13 +112,8 @@ class Gateway extends AbstractGateway
         return $this->setParameter('paymentMethod', $value);
     }
 
-    public function purchase(array $parameters = array())
+    public function getVerifyCode()
     {
-        return $this->createRequest('\Omnipay\MolPay\Message\PurchaseRequest', $parameters);
-    }
-
-    public function completePurchase(array $parameters = array())
-    {
-        return $this->createRequest('\Omnipay\MolPay\Message\CompletePurchaseRequest', $parameters);
+        return md5($this->getAmount().$this->getMerchantId().$this->getTransactionId().$this->getVerifyKey());
     }
 }
