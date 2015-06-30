@@ -4,8 +4,7 @@
         "psr-4": { "Omnipay\\MolPay\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "~2.3",
-        "thefoxjob/in-page_payment": "dev-master"
+        "omnipay/common": "~2.3"
     },
     "require-dev": {
         "omnipay/tests": "~2.0"
