@@ -1,6 +1,6 @@
 <?php namespace Omnipay\MolPay;
 
-use Onipay\Common\AbstractGateway;
+use Omnipay\Common\AbstractGateway;
 use MolPay\Distribution\InpageMolpay;
 
 class Gateway extends AbstractGateway

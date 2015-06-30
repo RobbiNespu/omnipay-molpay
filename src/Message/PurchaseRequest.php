@@ -1,4 +1,4 @@
-<?php namespace OmniPay\MolPay\Message;
+<?php namespace Omnipay\MolPay\Message;
 
 class PurchaseRequest extends AbstractRequest
 {

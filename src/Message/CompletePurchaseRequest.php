@@ -2,13 +2,13 @@
 
 use Omnipay\Common\Exception\InvalidResponseException;
 
-class CompletePurchaseReques extends PurchaseRequest()
+class CompletePurchaseRequest extends PurchaseRequest
 {
     public function getData()
     {
         $data = $this->httpRequest->request->all();
 
-        $secret_key = isset($data['skey'] ? $data['skey'] : null;
+        $secret_key = isset($data['skey']) ? $data['skey'] : null;
         $pay_date = isset($data['paydate']) ? $data['paydate'] : '';
         $domain = isset($data['domain']) ? $data['domain'] : '';
         $app_code = isset($data['appcode']) ? $data['appcode'] : '';
