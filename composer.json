@@ -1,8 +1,14 @@
 {
-    "name": "edward/omnipay-molpay",
+    "name": "thefoxjob/omnipay-molpay",
+    "autoload": {
+        "psr-4": { "Omnipay\\MolPay\\" : "src/" }
+    },
     "require": {
         "omnipay/common": "~2.3",
         "thefoxjob/in-page_payment": "dev-master"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
     },
     "authors": [
         {
