@@ -1,0 +1,13 @@
+{
+    "name": "edward/omnipay-molpay",
+    "require": {
+        "omnipay/common": "~2.3",
+        "thefoxjob/in-page_payment": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Edward Khor",
+            "email": "edward@enfonius.com"
+        }
+    ]
+}
