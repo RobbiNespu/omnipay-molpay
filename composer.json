@@ -14,5 +14,6 @@
             "name": "Edward Khor",
             "email": "edward@enfonius.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
