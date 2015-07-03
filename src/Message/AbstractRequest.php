@@ -17,7 +17,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->getParameter('verifyKey');
     }
 
-    public function setVerifyKey()
+    public function setVerifyKey($value)
     {
         return $this->setParameter('verifyKey', $value);
     }

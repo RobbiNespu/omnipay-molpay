@@ -43,7 +43,7 @@ class Gateway extends AbstractGateway
         return $this->getParameter('verifyKey');
     }
 
-    public function setVerifyKey()
+    public function setVerifyKey($value)
     {
         return $this->setParameter('verifyKey', $value);
     }
