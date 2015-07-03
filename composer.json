@@ -1,5 +1,6 @@
 {
     "name": "thefoxjob/omnipay-molpay",
+    "license": "MIT",
     "autoload": {
         "psr-4": { "Omnipay\\MolPay\\" : "src/" }
     },
