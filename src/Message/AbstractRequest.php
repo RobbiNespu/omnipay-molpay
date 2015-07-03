@@ -52,12 +52,12 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('billingMobile', $value);
     }
 
-    public function getBillingDesc()
+    public function getBillingDescription()
     {
         return $this->getParameter('billingDescription');
     }
 
-    public function setBillingDesc($value)
+    public function setBillingDescription($value)
     {
         return $this->setParameter('billingDescription', $value);
     }
